@@ -1,0 +1,1013 @@
+<!DOCTYPE html><html lang="ko"><head>
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NUA DERMA · RESET SERUM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&amp;family=DM+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --white: #FFFFFF;
+    --cream: #F6F2EC;
+    --sage: #DFE6DA;
+    --sage-deep: #C8D4C2;
+    --black: #1A1A18;
+    --gray: #6B6B68;
+    --light-gray: #A8A8A5;
+    --accent: #B5A882;
+    --amber: #C8922A;
+    --font-ko: 'Noto Sans KR', sans-serif;
+    --font-en: 'DM Sans', sans-serif;
+  }
+
+  body {
+    background: #EDEAE4;
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-ko);
+  }
+
+  .page {
+    width: 430px;
+    background: var(--white);
+    position: relative;
+  }
+
+  /* ── 공통 ── */
+  .section { width: 100%; overflow: hidden; }
+
+  /* 이미지 플레이스홀더 */
+  .img-ph {
+    width: 100%;
+    background: #E0DDD8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: relative;
+    overflow: hidden;
+  }
+  .img-ph::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 8px,
+      rgba(255,255,255,0.35) 8px,
+      rgba(255,255,255,0.35) 9px
+    );
+  }
+  .img-ph-label {
+    position: relative;
+    font-family: var(--font-en);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #888;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  /* divider */
+  .divider {
+    width: 24px;
+    height: 1px;
+    background: var(--black);
+    margin: 0 auto;
+  }
+  .divider-light {
+    width: 24px;
+    height: 1px;
+    background: var(--accent);
+    margin: 0 auto;
+  }
+
+  /* ────────────────────────────────── */
+  /* S1 · 히어로 */
+  /* ────────────────────────────────── */
+  .s1 { background: var(--sage); position: relative; }
+
+  .s1-hero-img { height: 540px; }
+
+  .s1-bottom {
+    background: var(--white);
+    padding: 36px 32px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .s1-eyebrow {
+    font-family: var(--font-en);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    color: var(--light-gray);
+    text-transform: uppercase;
+  }
+  .s1-headline {
+    font-size: 26px;
+    font-weight: 300;
+    color: var(--black);
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+  }
+  .s1-headline strong {
+    font-weight: 700;
+    display: block;
+    font-family: var(--font-en);
+    font-size: 22px;
+    letter-spacing: 0.08em;
+    margin-top: 2px;
+  }
+
+  /* ────────────────────────────────── */
+  /* S2 · 제품 정체성 */
+  /* ────────────────────────────────── */
+  .s2 {
+    background: var(--white);
+    padding: 48px 32px;
+    text-align: center;
+    border-top: 1px solid #EDEAE4;
+  }
+  .s2-brand {
+    font-family: var(--font-en);
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    color: var(--light-gray);
+    margin-bottom: 14px;
+  }
+  .s2-product {
+    font-family: var(--font-en);
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: var(--black);
+    margin-bottom: 8px;
+  }
+  .s2-sub {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--gray);
+    letter-spacing: 0.05em;
+  }
+  .s2-img { height: 320px; margin: 36px 0 0; }
+
+  /* ────────────────────────────────── */
+  /* S3 · 브랜드 독백 */
+  /* ────────────────────────────────── */
+  .s3 { background: var(--cream); }
+  .s3-img { height: 460px; }
+  .s3-text {
+    padding: 44px 36px 48px;
+  }
+  .s3-brand-tag {
+    font-family: var(--font-en);
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    color: var(--light-gray);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .s3-brand-tag::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #CCCAC4;
+  }
+  .s3-product-name {
+    font-family: var(--font-en);
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--black);
+    margin-bottom: 4px;
+  }
+  .s3-product-sub {
+    font-size: 12px;
+    color: var(--gray);
+    margin-bottom: 28px;
+    font-weight: 300;
+  }
+  .s3-copy {
+    font-size: 14px;
+    line-height: 2;
+    color: var(--black);
+    font-weight: 300;
+    letter-spacing: 0.02em;
+  }
+  .s3-copy em {
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  /* ────────────────────────────────── */
+  /* S4 · 4가지 핵심 가치 */
+  /* ────────────────────────────────── */
+  .s4 {
+    background: var(--white);
+    padding: 52px 28px;
+    border-top: 1px solid #EDEAE4;
+  }
+  .s4-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .s4-header-en {
+    font-family: var(--font-en);
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    color: var(--light-gray);
+    margin-bottom: 10px;
+  }
+  .s4-header-ko {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--black);
+    letter-spacing: -0.01em;
+  }
+  .s4-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 16px;
+  }
+  .s4-item {
+    text-align: center;
+    padding: 28px 12px;
+    border: 1px solid #EDEAE4;
+  }
+  .s4-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 14px;
+  }
+  .s4-num {
+    font-family: var(--font-en);
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+  .s4-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--black);
+    margin-bottom: 6px;
+  }
+  .s4-desc {
+    font-size: 11px;
+    color: var(--gray);
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  /* ────────────────────────────────── */
+  /* S5 · 후기 */
+  /* ────────────────────────────────── */
+  .s5 { background: var(--cream); padding: 52px 32px; }
+  .s5-header { text-align: center; margin-bottom: 36px; }
+  .s5-header-en {
+    font-family: var(--font-en);
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    color: var(--light-gray);
+    margin-bottom: 10px;
+  }
+  .s5-header-ko {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 4px;
+  }
+  .s5-header-sub {
+    font-size: 12px;
+    color: var(--gray);
+    font-weight: 300;
+  }
+  .s5-reviews { display: flex; flex-direction: column; gap: 20px; }
+  .s5-review {
+    background: var(--white);
+    padding: 22px 20px;
+  }
+  .s5-stars {
+    color: #C8922A;
+    font-size: 12px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .s5-stars span {
+    font-family: var(--font-en);
+    font-size: 10px;
+    color: var(--light-gray);
+    letter-spacing: 0.05em;
+  }
+  .s5-review-text {
+    font-size: 13px;
+    line-height: 1.85;
+    color: var(--black);
+    font-weight: 300;
+  }
+
+  /* ────────────────────────────────── */
+  /* S6 · 증명 비주얼 */
+  /* ────────────────────────────────── */
+  .s6 { background: var(--black); }
+  .s6-img { height: 400px; }
+  .s6-img .img-ph { height: 100%; background: #2C2C28; }
+  .s6-img .img-ph::before {
+    background-image: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 8px,
+      rgba(255,255,255,0.06) 8px,
+      rgba(255,255,255,0.06) 9px
+    );
+  }
+  .s6-img .img-ph-label { color: #666; }
+  .s6-text {
+    padding: 44px 36px 52px;
+    color: var(--white);
+  }
+  .s6-en {
+    font-family: var(--font-en);
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    color: #888;
+    margin-bottom: 16px;
+  }
+  .s6-headline {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    letter-spacing: -0.01em;
+  }
+  .s6-body {
+    font-size: 13px;
+    line-height: 2;
+    color: #AAAAAA;
+    font-weight: 300;
+  }
+
+  /* ────────────────────────────────── */
+  /* S7 · 체크리스트 */
+  /* ────────────────────────────────── */
+  .s7 { background: var(--sage); padding: 52px 36px; }
+  .s7-header { margin-bottom: 36px; }
+  .s7-en {
+    font-family: var(--font-en);
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    color: var(--gray);
+    margin-bottom: 10px;
+  }
+  .s7-headline {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--black);
+    line-height: 1.4;
+  }
+  .s7-list { display: flex; flex-direction: column; gap: 0; }
+  .s7-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--sage-deep);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--black);
+    line-height: 1.5;
+  }
+  .s7-item:first-child { border-top: 1px solid var(--sage-deep); }
+  .s7-check {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* ────────────────────────────────── */
+  /* S8 · 우려 해소 */
+  /* ────────────────────────────────── */
+  .s8 { background: var(--white); padding: 52px 32px; }
+  .s8-header { text-align: center; margin-bottom: 40px; }
+  .s8-headline {
+    font-size: 19px;
+    font-weight: 500;
+    color: var(--black);
+    line-height: 1.45;
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+  }
+  .s8-sub {
+    font-size: 12px;
+    color: var(--gray);
+    line-height: 1.8;
+    font-weight: 300;
+  }
+  .s8-img { height: 320px; margin-bottom: 36px; }
+  .s8-ingredients { display: flex; flex-direction: column; gap: 0; }
+  .s8-ingredient {
+    padding: 20px 0;
+    border-bottom: 1px solid #EDEAE4;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .s8-ingredient:first-child { border-top: 1px solid #EDEAE4; }
+  .s8-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--sage-deep);
+    flex-shrink: 0;
+    margin-top: 5px;
+  }
+  .s8-ing-name {
+    font-family: var(--font-en);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--black);
+    margin-bottom: 3px;
+    letter-spacing: 0.02em;
+  }
+  .s8-ing-desc {
+    font-size: 11px;
+    color: var(--gray);
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  /* ────────────────────────────────── */
+  /* S9 · POINT 01 */
+  /* ────────────────────────────────── */
+  .s-point { background: var(--cream); }
+  .s-point-img { height: 380px; }
+  .s-point-text { padding: 44px 36px 52px; }
+  .s-point-num {
+    font-family: var(--font-en);
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+  .s-point-headline {
+    font-size: 21px;
+    font-weight: 500;
+    color: var(--black);
+    line-height: 1.35;
+    margin-bottom: 22px;
+    letter-spacing: -0.01em;
+  }
+  .s-point-headline em {
+    font-style: normal;
+    font-family: var(--font-en);
+    font-weight: 600;
+    display: block;
+    font-size: 18px;
+    letter-spacing: 0.06em;
+    color: var(--black);
+  }
+  .s-point-body {
+    font-size: 13px;
+    line-height: 2;
+    color: var(--gray);
+    font-weight: 300;
+  }
+
+  /* ────────────────────────────────── */
+  /* S10 · POINT 02 */
+  /* ────────────────────────────────── */
+  .s10 { background: var(--white); }
+
+  /* ────────────────────────────────── */
+  /* S11 · POINT 03 */
+  /* ────────────────────────────────── */
+  .s11 { background: var(--cream); }
+  .s11-benefits {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-top: 28px;
+    border-top: 1px solid #CCCAC4;
+    border-left: 1px solid #CCCAC4;
+  }
+  .s11-benefit {
+    padding: 20px 16px;
+    border-right: 1px solid #CCCAC4;
+    border-bottom: 1px solid #CCCAC4;
+    text-align: center;
+  }
+  .s11-benefit-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--black);
+    margin-bottom: 4px;
+  }
+  .s11-benefit-sub {
+    font-size: 11px;
+    color: var(--gray);
+    font-weight: 300;
+  }
+
+  /* ────────────────────────────────── */
+  /* S12 · HOW TO USE */
+  /* ────────────────────────────────── */
+  .s12 { background: var(--white); padding: 52px 32px 60px; }
+  .s12-header { text-align: center; margin-bottom: 36px; }
+  .s12-en {
+    font-family: var(--font-en);
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    color: var(--light-gray);
+    margin-bottom: 10px;
+  }
+  .s12-headline {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--black);
+  }
+  .s12-img { height: 300px; margin-bottom: 36px; }
+  .s12-steps { display: flex; flex-direction: column; gap: 0; margin-bottom: 48px; }
+  .s12-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 18px 0;
+    border-bottom: 1px solid #EDEAE4;
+  }
+  .s12-step:first-child { border-top: 1px solid #EDEAE4; }
+  .s12-step-num {
+    font-family: var(--font-en);
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+    min-width: 48px;
+    padding-top: 1px;
+  }
+  .s12-step-text {
+    font-size: 13px;
+    color: var(--black);
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  /* 스펙 테이블 */
+  .s12-spec-header {
+    border-top: 2px solid var(--black);
+    padding-top: 32px;
+    margin-bottom: 16px;
+  }
+  .s12-brand-logo {
+    font-family: var(--font-en);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: var(--black);
+    margin-bottom: 2px;
+  }
+  .s12-brand-sub {
+    font-family: var(--font-en);
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    color: var(--light-gray);
+  }
+  .s12-spec-table { width: 100%; margin-top: 20px; }
+  .s12-spec-row {
+    display: flex;
+    padding: 10px 0;
+    border-bottom: 1px solid #EDEAE4;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+  .s12-spec-key {
+    color: var(--gray);
+    min-width: 90px;
+    font-weight: 300;
+  }
+  .s12-spec-val {
+    color: var(--black);
+    font-weight: 400;
+  }
+  .s12-notice {
+    margin-top: 24px;
+    font-size: 11px;
+    color: var(--light-gray);
+    line-height: 1.8;
+    font-weight: 300;
+  }
+  .s12-watermark {
+    text-align: center;
+    margin-top: 48px;
+    font-family: var(--font-en);
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    color: #CCCCCC;
+  }
+</style>
+
+<template id="__bundler_thumbnail" data-bg-color="#F6F2EC">
+  <svg viewBox="0 0 430 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="430" height="800" fill="#F6F2EC"></rect>
+    <rect x="160" y="180" width="110" height="160" rx="6" fill="#C8A96E" opacity="0.5"></rect>
+    <rect x="175" y="150" width="80" height="36" rx="18" fill="#A07850" opacity="0.6"></rect>
+    <text x="215" y="420" text-anchor="middle" font-family="serif" font-size="18" fill="#1A1A18" letter-spacing="4">NUA DERMA</text>
+    <text x="215" y="448" text-anchor="middle" font-family="serif" font-size="13" fill="#A8A8A5" letter-spacing="6">RESET SERUM</text>
+  </svg>
+</template>
+</head>
+<body style="cursor: crosshair; font-size: 93px;" data-cc-id="cc-1">
+<div class="page">
+
+  <!-- ──────────────── S1 · 히어로 ──────────────── -->
+  <section class="section s1">
+    <div style="height:540px; overflow:hidden;">
+      <img src="uploads/pasted-1776831781365-0.png" style="width:100%; height:100%; object-fit:cover; object-position:center top;" alt="RESET SERUM 히어로" data-cc-id="cc-4">
+    </div>
+    <div class="s1-bottom" data-cc-id="cc-5">
+      <p class="s1-eyebrow">NUA DERMA · DERMATOLOGY</p>
+      <h1 class="s1-headline" data-cc-id="cc-6">
+        매일 리셋되는 피부,
+        <strong data-cc-id="cc-7">RESET SERUM</strong>
+      </h1>
+    </div>
+  </section>
+
+  <!-- ──────────────── S2 · 제품 정체성 ──────────────── -->
+  <section class="section s2" data-cc-id="cc-2">
+    <p class="s2-brand" data-cc-id="cc-18">NUA DERMA · DERMATOLOGY</p>
+    <p class="s2-product" data-cc-id="cc-8">RESET SERUM</p>
+    <p class="s2-sub" data-cc-id="cc-9">진정 · 수분 세럼</p>
+    <div style="height:420px; overflow:hidden; margin: 36px -32px -48px;">
+      <img src="uploads/pasted-1776749884537-0.png" style="width:100%; height:100%; object-fit:cover; object-position:center 30%; display:block;" alt="RESET SERUM 제품컷">
+    </div>
+  </section>
+
+  <!-- ──────────────── S3 · 브랜드 독백 ──────────────── -->
+  <section class="section s3">
+    <div style="height:460px; overflow:hidden;">
+      <img src="uploads/pasted-1776832395615-0.png" style="width:100%; height:100%; object-fit:cover; object-position:center top;" alt="브랜드 독백 모델" data-cc-id="cc-17">
+    </div>
+    <div class="s3-text" data-cc-id="cc-19">
+      <p class="s3-brand-tag">NUA DERMA · DERMATOLOGY</p>
+      <p class="s3-product-name">RESET SERUM</p>
+      <p class="s3-product-sub">진정 · 수분 세럼</p>
+      <p class="s3-copy">
+        하루를 마주한 피부에게<br>
+        다시 시작할 시간을 돌려주는 것.<br><br>
+        <em>NUA DERMA가 세럼 한 병에 담은 철학입니다.</em>
+      </p>
+    </div>
+  </section>
+
+  <!-- ──────────────── S4 · 4가지 핵심 가치 ──────────────── -->
+  <section class="section s4" data-cc-id="cc-20">
+    <div class="s4-header">
+      <p class="s4-header-en">CORE VALUES</p>
+      <p class="s4-header-ko">4가지 핵심 가치</p>
+    </div>
+    <div class="s4-grid">
+      <div class="s4-item">
+        <svg class="s4-icon" viewBox="0 0 40 40" fill="none">
+          <circle cx="20" cy="20" r="18" stroke="#C8D4C2" stroke-width="1.5"></circle>
+          <path d="M12 20 Q20 10 28 20 Q20 30 12 20Z" stroke="#1A1A18" stroke-width="1.2" fill="none"></path>
+        </svg>
+        <p class="s4-num">01</p>
+        <p class="s4-title">진정</p>
+        <p class="s4-desc">CICA 함유<br>민감 피부 케어</p>
+      </div>
+      <div class="s4-item" data-cc-id="cc-21">
+        <svg class="s4-icon" viewBox="0 0 40 40" fill="none">
+          <circle cx="20" cy="20" r="18" stroke="#C8D4C2" stroke-width="1.5"></circle>
+          <path d="M20 10 Q28 18 20 30 Q12 18 20 10Z" stroke="#1A1A18" stroke-width="1.2" fill="none"></path>
+        </svg>
+        <p class="s4-num">02</p>
+        <p class="s4-title">수분</p>
+        <p class="s4-desc">즉각 보습<br>판테놀·세라마이드</p>
+      </div>
+      <div class="s4-item">
+        <svg class="s4-icon" viewBox="0 0 40 40" fill="none">
+          <circle cx="20" cy="20" r="18" stroke="#C8D4C2" stroke-width="1.5"></circle>
+          <path d="M14 26 L20 14 L26 26" stroke="#1A1A18" stroke-width="1.2" fill="none"></path>
+          <line x1="16" y1="22" x2="24" y2="22" stroke="#1A1A18" stroke-width="1.2"></line>
+        </svg>
+        <p class="s4-num">03</p>
+        <p class="s4-title">흡수</p>
+        <p class="s4-desc">라이트 텍스처<br>빠른 흡수력</p>
+      </div>
+      <div class="s4-item">
+        <svg class="s4-icon" viewBox="0 0 40 40" fill="none">
+          <circle cx="20" cy="20" r="18" stroke="#C8D4C2" stroke-width="1.5"></circle>
+          <circle cx="20" cy="20" r="5" stroke="#1A1A18" stroke-width="1.2" fill="none"></circle>
+          <line x1="20" y1="11" x2="20" y2="14" stroke="#1A1A18" stroke-width="1.2"></line>
+          <line x1="20" y1="26" x2="20" y2="29" stroke="#1A1A18" stroke-width="1.2"></line>
+          <line x1="11" y1="20" x2="14" y2="20" stroke="#1A1A18" stroke-width="1.2"></line>
+          <line x1="26" y1="20" x2="29" y2="20" stroke="#1A1A18" stroke-width="1.2"></line>
+        </svg>
+        <p class="s4-num">04</p>
+        <p class="s4-title">데일리</p>
+        <p class="s4-desc">매일 사용 가능<br>순한 포뮬러</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────── S5 · 솔직한 후기 ──────────────── -->
+  <section class="section s5" data-cc-id="cc-22">
+    <div class="s5-header">
+      <p class="s5-header-en">REAL REVIEW</p>
+      <p class="s5-header-ko">"수분감 채워졌어요"</p>
+      <p class="s5-header-sub">믿고 쓰는 솔직한 후기</p>
+    </div>
+    <div class="s5-reviews">
+      <div class="s5-review" data-cc-id="cc-23">
+        <div class="s5-stars">
+          ★★★★★
+          <span>김○○님</span>
+        </div>
+        <p class="s5-review-text">
+          바르자마자 피부가 가라앉는 느낌이에요.<br>
+          아침에 메이크업 전에도 밀리지 않아서 계속 찾게 됩니다.
+        </p>
+      </div>
+      <div class="s5-review" data-cc-id="cc-24">
+        <div class="s5-stars">
+          ★★★★★
+          <span>이○○님</span>
+        </div>
+        <p class="s5-review-text">
+          민감해서 뭐든 조심스러운데 이건 자극 없이 잘 맞았어요.<br>
+          용기도 깔끔해서 자리만 잡아놓고 아껴 씁니다.
+        </p>
+      </div>
+      <div class="s5-review" data-cc-id="cc-25">
+        <div class="s5-stars">
+          ★★★★★
+          <span>박○○님</span>
+        </div>
+        <p class="s5-review-text">
+          건조한 환절기에 특히 좋아요.<br>
+          두세 방울이면 충분한데 속까지 차오르는 느낌입니다.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────── S6 · 증명 비주얼 ──────────────── -->
+  <section class="section s6">
+    <div class="s6-img" style="height:420px; overflow:hidden;">
+      <img src="uploads/pasted-1776832492344-0.png" style="width:100%; height:100%; object-fit:cover; object-position:center;" alt="증명 비주얼 랩" data-cc-id="cc-26">
+    </div>
+    <div class="s6-text" data-cc-id="cc-35">
+      <p class="s6-en">FORMULATED WITH SCIENCE</p>
+      <p class="s6-headline">검증된 성분,<br>정제된 조합</p>
+      <p class="s6-body">
+        6종의 핵심 성분이<br>
+        피부 본연의 리듬을 돕도록<br>
+        설계되었습니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- ──────────────── S7 · 추천 대상 체크리스트 ──────────────── -->
+  <section class="section s7" data-cc-id="cc-27">
+    <div class="s7-header">
+      <p class="s7-en">SPECIAL CHECK LIST</p>
+      <p class="s7-headline">이런 분들께<br>추천합니다</p>
+    </div>
+    <div class="s7-list">
+      <div class="s7-item">
+        <svg class="s7-check" viewBox="0 0 18 18" fill="none">
+          <circle cx="9" cy="9" r="8.5" stroke="#1A1A18" stroke-width="1"></circle>
+          <path d="M5.5 9L8 11.5L12.5 6.5" stroke="#1A1A18" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        건조함이 오래 지속되는 분
+      </div>
+      <div class="s7-item">
+        <svg class="s7-check" viewBox="0 0 18 18" fill="none">
+          <circle cx="9" cy="9" r="8.5" stroke="#1A1A18" stroke-width="1"></circle>
+          <path d="M5.5 9L8 11.5L12.5 6.5" stroke="#1A1A18" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        촉촉한 보습감이 필요한 분
+      </div>
+      <div class="s7-item">
+        <svg class="s7-check" viewBox="0 0 18 18" fill="none">
+          <circle cx="9" cy="9" r="8.5" stroke="#1A1A18" stroke-width="1"></circle>
+          <path d="M5.5 9L8 11.5L12.5 6.5" stroke="#1A1A18" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        메이크업 전 밀착감을 원하는 분
+      </div>
+      <div class="s7-item">
+        <svg class="s7-check" viewBox="0 0 18 18" fill="none">
+          <circle cx="9" cy="9" r="8.5" stroke="#1A1A18" stroke-width="1"></circle>
+          <path d="M5.5 9L8 11.5L12.5 6.5" stroke="#1A1A18" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        민감한 피부로 제품 선택이 까다로운 분
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────── S8 · 우려 해소 ──────────────── -->
+  <section class="section s8" data-cc-id="cc-30">
+    <div class="s8-header">
+      <p class="s8-headline" data-cc-id="cc-34">민감한 피부도<br>안심하고 매일 사용하세요</p>
+      <p class="s8-sub" data-cc-id="cc-33">
+        알러지 유발 원료, 인공 색소, 인공 향료를<br>
+        배제하고 설계된 포뮬러입니다.
+      </p>
+    </div>
+    <div style="height:320px; overflow:hidden; margin-bottom:36px;">
+      <img src="uploads/pasted-1776832755688-0.png" style="width:100%; height:100%; object-fit:cover; object-position:center top;" alt="성분 모델컷">
+    </div>
+    <div class="s8-ingredients">
+      <div class="s8-ingredient">
+        <div class="s8-dot"></div>
+        <div>
+          <p class="s8-ing-name">Centella Asiatica · 병풀 추출물</p>
+          <p class="s8-ing-desc">진정 케어 성분 · 민감 피부에 널리 사용됨</p>
+        </div>
+      </div>
+      <div class="s8-ingredient">
+        <div class="s8-dot"></div>
+        <div>
+          <p class="s8-ing-name" data-cc-id="cc-31">Panthenol · 판테놀</p>
+          <p class="s8-ing-desc">보습 · 피부 컨디셔닝 성분</p>
+        </div>
+      </div>
+      <div class="s8-ingredient" data-cc-id="cc-28">
+        <div class="s8-dot"></div>
+        <div>
+          <p class="s8-ing-name">Ceramide NP · 세라마이드 NP</p>
+          <p class="s8-ing-desc" data-cc-id="cc-32">수분 보호막 형성 성분</p>
+        </div>
+      </div>
+      <div class="s8-ingredient" data-cc-id="cc-29">
+        <div class="s8-dot"></div>
+        <div>
+          <p class="s8-ing-name">Beta-Glucan · 베타-글루칸</p>
+          <p class="s8-ing-desc">보습 · 피부 컨디셔닝 지원 성분</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────── S9 · POINT 01 ──────────────── -->
+  <section class="section s-point">
+    <div style="height:380px; background:#DDE5DA; display:flex; align-items:center; justify-content:center; overflow:hidden;">
+      <img src="uploads/pasted-1776833932245-0.png" style="height:90%; width:auto; object-fit:contain;" alt="RESET SERUM POINT 01">
+    </div>
+    <div class="s-point-text" data-cc-id="cc-10">
+      <p class="s-point-num">POINT 01</p>
+      <p class="s-point-headline" data-cc-id="cc-11">
+        피부를 진정시키는<br>
+        <em data-cc-id="cc-12">CICA Complex</em>
+      </p>
+      <p class="s-point-body">
+        병풀에서 추출한 마데카소사이드 성분이<br>
+        피부의 민감한 신호를 달래고<br>
+        균형 잡힌 컨디션을 지켜줍니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- ──────────────── S10 · POINT 02 ──────────────── -->
+  <section class="section s-point s10">
+    <div style="height:380px; background:#E8EEF4; display:flex; align-items:center; justify-content:center; overflow:hidden;">
+      <img src="uploads/pasted-1776835331681-0.png" style="height:90%; width:auto; object-fit:contain;" alt="RESET SERUM POINT 02">
+    </div>
+    <div class="s-point-text" style="background:var(--white);">
+      <p class="s-point-num">POINT 02</p>
+      <p class="s-point-headline">
+        수분층을 겹겹이 쌓는<br>
+        <em>Deep Hydration</em>
+      </p>
+      <p class="s-point-body">
+        판테놀과 세라마이드 NP가 함께 작용하여<br>
+        수분이 쉽게 증발하지 않도록 돕고<br>
+        매끄러운 결을 만듭니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- ──────────────── S11 · POINT 03 ──────────────── -->
+  <section class="section s-point s11">
+    <div style="height:380px; background:#EAE6DF; display:flex; align-items:center; justify-content:center; overflow:hidden;">
+      <img src="uploads/pasted-1776835331681-0.png" style="height:90%; width:auto; object-fit:contain;" alt="RESET SERUM POINT 03">
+    </div>
+    <div class="s-point-text">
+      <p class="s-point-num">POINT 03</p>
+      <p class="s-point-headline">
+        W 데일리 케어<br>
+        <em style="font-size:14px; font-weight:300; font-family:var(--font-ko); letter-spacing:0;">하루 두 번, 간결한 루틴으로</em>
+      </p>
+      <p class="s-point-body">
+        피부 컨디션을 유지합니다.
+      </p>
+      <div class="s11-benefits">
+        <div class="s11-benefit">
+          <p class="s11-benefit-title">매끄러움</p>
+          <p class="s11-benefit-sub">결 정돈</p>
+        </div>
+        <div class="s11-benefit">
+          <p class="s11-benefit-title">탄력감</p>
+          <p class="s11-benefit-sub">윤기</p>
+        </div>
+        <div class="s11-benefit">
+          <p class="s11-benefit-title">촉촉함</p>
+          <p class="s11-benefit-sub">수분 유지</p>
+        </div>
+        <div class="s11-benefit">
+          <p class="s11-benefit-title">밀착감</p>
+          <p class="s11-benefit-sub">메이크업 전 사용</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────── S12 · HOW TO USE ──────────────── -->
+  <section class="section s12">
+    <div class="s12-header">
+      <p class="s12-en">HOW TO USE</p>
+      <p class="s12-headline">사용 방법</p>
+    </div>
+
+    <div style="height:320px; overflow:hidden; margin: 0 -32px 36px;">
+      <img src="uploads/pasted-1776749884537-0.png" style="width:100%; height:100%; object-fit:cover; object-position:center 40%;" alt="RESET SERUM">
+    </div>
+
+    <p style="font-size:13px; color:var(--gray); line-height:2; font-weight:300; margin-bottom:32px;">
+      세안 후 토너로 결을 정돈한 뒤<br>
+      2~3방울을 얼굴 전체에 부드럽게<br>
+      펴 발라 흡수시킵니다.
+    </p>
+
+    <div class="s12-steps">
+      <div class="s12-step">
+        <span class="s12-step-num">Step 1</span>
+        <span class="s12-step-text">세안 후 토너 사용</span>
+      </div>
+      <div class="s12-step">
+        <span class="s12-step-num">Step 2</span>
+        <span class="s12-step-text">RESET SERUM 2~3방울 도포</span>
+      </div>
+      <div class="s12-step">
+        <span class="s12-step-num">Step 3</span>
+        <span class="s12-step-text">가볍게 두드려 흡수</span>
+      </div>
+    </div>
+
+    <!-- 스펙 -->
+    <div class="s12-spec-header">
+      <p class="s12-brand-logo">NUA DERMA</p>
+      <p class="s12-brand-sub">DERMATOLOGY</p>
+    </div>
+    <div class="s12-spec-table">
+      <div class="s12-spec-row">
+        <span class="s12-spec-key">제품명</span>
+        <span class="s12-spec-val">RESET SERUM</span>
+      </div>
+      <div class="s12-spec-row">
+        <span class="s12-spec-key">용량</span>
+        <span class="s12-spec-val">50ml</span>
+      </div>
+      <div class="s12-spec-row">
+        <span class="s12-spec-key">사용기한</span>
+        <span class="s12-spec-val">제조일로부터 30개월</span>
+      </div>
+      <div class="s12-spec-row">
+        <span class="s12-spec-key">보관법</span>
+        <span class="s12-spec-val">직사광선을 피해 서늘한 곳에 보관</span>
+      </div>
+      <div class="s12-spec-row">
+        <span class="s12-spec-key">제조판매업자</span>
+        <span class="s12-spec-val" style="color:var(--light-gray);">[입력]</span>
+      </div>
+      <div class="s12-spec-row">
+        <span class="s12-spec-key">제조업자</span>
+        <span class="s12-spec-val" style="color:var(--light-gray);">[입력]</span>
+      </div>
+      <div class="s12-spec-row" style="border-bottom:none; align-items:flex-start;">
+        <span class="s12-spec-key">전성분</span>
+        <span class="s12-spec-val" style="color:var(--light-gray);">[전성분 풀 리스트 기입]</span>
+      </div>
+    </div>
+    <p class="s12-notice">
+      ※ 이상 반응 발생 시 사용을 중단하고 전문의와 상담하시기 바랍니다.<br>
+      ※ 개봉 후에는 가능한 한 빠른 시일 내에 사용하세요.
+    </p>
+
+    <p class="s12-watermark">Sample Work · 가상 상품 콘셉트 · NUA DERMA</p>
+  </section>
+
+</div>
+
+
+</body></html>
